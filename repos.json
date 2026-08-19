@@ -1,0 +1,41 @@
+{
+  "_doc": "Registry of the front project (front-master). A SUBSET of repo_master/repos.json (git-repos-master), narrowed to the front-* family. Identical name/url/private/doc fields to that superset; the two must not disagree. This repo is an INDEX, not a container — see clone.sh for the clone/link model.",
+  "_schema": "front-repos/v1",
+  "base_dir_doc": "Clones live outside this index, as siblings in $CLOUD_GIT_BASE (default ~/git). This repo holds only committed symlinks pointing at them.",
+  "base_dir_default": "~/git",
+  "_visibility_doc": "private:true repos require SSH access configured for this GitHub account to clone.",
+  "groups": {},
+  "repos": [
+    {
+      "name": "front",
+      "url": "git@github.com:diegonmarcos/diegonmarcos.github.io.git",
+      "private": false,
+      "doc": "Front-end: the published site and its derive job (1_front-configs). Cloned as 'front', not after its repo name — 112 files across unix and cloud reference ~/git/front, and it matches its siblings front-data/front-assets-cdn."
+    },
+    {
+      "name": "front-unity",
+      "url": "git@github.com:diegonmarcos/front-unity.git",
+      "private": true,
+      "doc": "Unity asset pipeline (unity-asset-vm: upkg2gltf, fetch-and-convert) plus its assets. Was front-asset-cdn, the predecessor of front-assets-cdn; renamed 2026-08-18 to match what it actually holds - the CDN itself is front-assets-cdn."
+    },
+    {
+      "name": "front-assets-cdn",
+      "url": "git@github.com:diegonmarcos/front-assets-cdn.git",
+      "private": false,
+      "doc": "Front-end static assets served from the CDN."
+    },
+    {
+      "name": "front-data",
+      "url": "git@github.com:diegonmarcos/front-data.git",
+      "private": false,
+      "doc": "Front-end content and data."
+    },
+    {
+      "name": "front-galaxy-gaia",
+      "url": "git@github.com:diegonmarcos/front-galaxy-gaia.git",
+      "private": true,
+      "doc": "Front-end experiment."
+    }
+  ],
+  "_root_doc": "No entries carry a group field — every front-* repo links at the root of this index, same as cloud-master."
+}
