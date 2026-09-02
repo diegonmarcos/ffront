@@ -7,10 +7,10 @@
   "groups": {},
   "repos": [
     {
-      "name": "front",
+      "name": "front-diegonmarcos",
       "url": "git@github.com:diegonmarcos/diegonmarcos.github.io.git",
       "private": false,
-      "doc": "Front-end: the published site and its derive job (1_front-configs). Cloned as 'front', not after its repo name — 112 files across unix and cloud reference ~/git/front, and it matches its siblings front-data/front-assets-cdn."
+      "doc": "Front-end: the published site and its derive job (1_front-configs). Cloned as 'front-diegonmarcos', not after its repo name (diegonmarcos.github.io) — every front member is front-<thing>, and the bare 'front' now belongs to the project master, exactly as 'cloud' does for a_cloud."
     },
     {
       "name": "front-unity",
